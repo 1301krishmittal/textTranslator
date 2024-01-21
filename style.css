@@ -1,0 +1,113 @@
+body{
+    /* background-color: black; */
+    background-repeat: repeat;
+    /* min-height: 100vh;  */
+    /* overflow:hidden; */
+    background-image: linear-gradient(to bottom right, rgb(222, 226, 255), rgb(62, 152, 220),rgb(33, 15, 146));
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+header{
+    color: rgb(240, 255, 247);
+    font-size: 70px;
+    background-image: url("https://th.bing.com/th/id/OIP.90d1A0wLqjS2mkWMBM3pHgHaDx?rs=1&pid=ImgDetMains");
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin-top: 0%;
+    font-family:'Steelfish Rg', 'helvetica neue', helvetica, arial, sans-serif;
+}
+.box{
+    width: 300px;
+    height: 200px;
+    /* border: solid; */
+    border-color: red;
+    border-width: 10px;
+    color: black;
+    margin: 40px;
+}
+.container{
+    display: flex;
+
+    }
+#sourceLanguage{
+    width: 120px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 30px;
+    font-size: 20px;
+}
+#targetLanguage , #reqSpokenlang{
+    width: 120px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 30px;
+    font-size: 20px;
+}
+#reqSpokenlang{
+    margin: 50px;
+}
+.material-symbols-outlined{
+    text-align: center;
+    font-size: 120px;
+    padding-left: 120px;
+    /* width: 500px; */
+}
+#microphone {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+.active {
+    cursor: pointer;
+    color: red;
+}
+#outputText{
+  /* border: 5px solid red; */
+  font-size: 30px;
+  color: rgb(105, 0, 101);
+  font-family: cursive;
+}
+#outputTextt{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 36, 8);
+    box-shadow: 7px 7px 4px rgb(4, 4, 85);
+    background-color: aliceblue;
+    padding: 20px;
+    border:3px solid black;
+    border-radius: 2%;
+    margin: 80px;
+    
+}
+
+.convertedSpeach ,.readSpeach{
+    /* border: 3px solid rgb(228, 21, 156); */
+    background-color: rgb(0, 204, 255);
+    width: 132px;
+    font-size: 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin:30px ;
+
+}
+.convertedSpeach:hover,.readSpeach:hover{
+    background-color: aqua;
+    /* border: 3px solid rgb(250, 0, 238); */
+}
+#sourceText{
+    border:3px solid black;
+    border-radius: 2%;
+    box-shadow: 7px 7px 4px rgb(4, 4, 85);
+}
+#translationResult{
+    border:3px solid black;
+    border-radius: 2%;
+    box-shadow: 7px 7px 4px rgb(4, 4, 85);
+}
+
+.outputTextt{
+    padding: 10px;
+}
