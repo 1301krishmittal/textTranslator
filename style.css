@@ -37,22 +37,26 @@ header{
 
     }
     .material-symbols-outlinedd{
-        font-size: 0px;
-        display: none;
+        /* font-size: 0px; */
+        /* display: none; */
+        transform: rotate(90deg);
     }
+    .container {
+        flex-direction: column; /* Change the flex direction to column when screen width is 750px or less */
+      }
 }
 .box{
-    width: 24%;
+    width: 300px;
     height: 200px;
     /* border: solid; */
     border-color: red;
     border-width: 10px;
     color: black;
-    margin: 4%;
-    
+    margin: 40px;
 }
 .container{
     display: flex;
+
     }
 #sourceLanguage{
     width: 120px;
@@ -74,15 +78,14 @@ header{
 .material-symbols-outlined{
     text-align: center;
     font-size: 120px;
-    /* padding-left: 60%; */
+    padding-left: 120px;
     /* width: 500px; */
 }
-
 #microphone {
+    /* margin: 20%; */
     cursor: pointer;
     width: 40px;
     height: 40px;
-    margin-left: 50%;
 }
 .active {
     cursor: pointer;
@@ -93,6 +96,7 @@ header{
   font-size: 30px;
   color: rgb(105, 0, 101);
   font-family: cursive;
+  width: 100%;
 }
 #outputTextt{
     font-size: 25px;
@@ -133,6 +137,21 @@ header{
 }
 
 .outputTextt{
-    padding: 10%;
-    width: 70%;
+    padding: 10px;
+}
+#endline{
+    font-size: 30px;
+    color:black;
+}
+.detailbox1{
+    
+    
+    
+    margin-left: 10px;
+    margin-right: 10px;
+    height:500px;
+    margin-bottom: 30px;
+    box-shadow: 8px 8px 5px rgb(0, 0, 0);
+    color:white;
+    font-size: 20px;
 }

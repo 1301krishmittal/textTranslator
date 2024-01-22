@@ -39,10 +39,10 @@
                     <option value="Urdu">Urdu</option>
                     <option value="Arabic">Arabic</option>
                 </select>
-                <textarea id="sourceText" name="sourceText" rows="6" cols="24%"></textarea>
+                <textarea id="sourceText" name="sourceText" rows="6" cols="60"></textarea>
                 <!-- <textarea id="inputText" ></textarea> -->
             </div>
-            <div class="box material-symbols-outlinedd material-symbols-outlined">
+            <div class="box material-symbols-outlined material-symbols-outlined">
                 swap_horiz
             </div>
             <div class="box">
@@ -68,7 +68,7 @@
                     <option value="Urdu">Urdu</option>
                     <option value="Arabic">Arabic</option>
                 </select>
-                <textarea id="translationResult" name="translationResult" rows="6" cols=24%></textarea>
+                <textarea id="translationResult" name="translationResult" rows="6" cols="60"></textarea>
             </div>
         </div>
         <div class="material-symbols-outlined" id = "microphone">
@@ -78,14 +78,28 @@
         <audio id='audio'src="audio2.wav" preload="auto"></audio>
         <div id="outputText"></div>
 
-        <span style="margin: 20%; font-size: 30px; color: rgb(16, 78, 0); font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><b>Select language for Converting ....</b> </span>
+        <p style="font-size: 30px; color: rgb(16, 78, 0); font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><b>Select language for Converting ....</b> </p>
           <select name="reqSpokenlang" id="reqSpokenlang">
-              <option value="Russian">Russian</option>
+            <option value="Russian">Russian</option>
             <option value="English">English</option>
             <option value="French">French</option>
             <option value="Sanskrit">Sanskrit</option>
             <option value="German">German</option>
             <option value="Spanish">Spanish</option>
+            <option value="Mandarin">Mandarin</option>
+            <option value="Portuguese">Portuguese</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Bengali">Bengali</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Marathi">Marathi</option>
+            <option value="Telugu">Telugu</option>
+            <option value="Tamil">Tamil</option>
+            <option value="Yue Chinese">Yue Chinese</option>
+            <option value="Vietnamese">Vietnamese</option>
+            <option value="Nigerian">Nigerian</option>
+            <option value="Indonesian">Indonesian</option>
+            <option value="Urdu">Urdu</option>
+            <option value="Arabic">Arabic</option>
           </select>
 
           <p>
@@ -93,6 +107,14 @@
           <div id="outputTextt" name="outputTextt">Converted Text.......</div>
           <button class="readSpeach" type="button" onclick="readText()">Click For readText</button>
         </p>
+        <br>
+        <div id="endline"><u>Do you want to learn some commonly used words of a langauge ??
+            Select the languages in the options given above.....</u></div>
+            <br>
+        <button class="getdetail" onclick= getdetail()>GET SOME COMMON WORDS</button>
+        <br><br>
+        <div id="detailbox"></div>
+            
     <script src="index.js"></script>
     <script src="mic.js"></script>
     <script>

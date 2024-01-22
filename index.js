@@ -118,8 +118,6 @@ function startMicrophone() {
     .then(data => {
         console.log(data.choices[0].message.content);
         const translation = data.choices[0].message.content;
-
-
           document.getElementById("outputTextt").innerHTML = `Converted Speach:  ${translation}`;
     })
   }
@@ -130,3 +128,38 @@ function startMicrophone() {
     const utterance = new SpeechSynthesisUtterance(text);
     speechSynthesis.speak(utterance);
   }
+  
+const box=document.getElementById("detailbox");
+function getdetail(){
+  box.classList.add("detailbox1");
+  box.innerHTML = "Please Wait ....";
+  const sourceLanguage = document.getElementById("sourceLanguage").value;
+  const targetLanguage = document.getElementById("targetLanguage").value;
+  const sourceText = `give some 40 commonly used words in ${targetLanguage} language which are useful for a tourist also write how to pronounce them in ${sourceLanguage}  and their meanings in ${sourceLanguage} only.And remember to give only the required output and don't give things in note`;
+  const OPENROUTER_API_KEY ="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";
+    const YOUR_SITE_URL ="http://127.0.0.1:5500/index.html";
+    const YOUR_SITE_NAME="hackathon";
+    fetch("https://openrouter.ai/api/v1/chat/completions", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization":  `Bearer ${OPENROUTER_API_KEY}`,
+            "HTTP-Referer": `${YOUR_SITE_URL}`, // Optional, for including your app on openrouter.ai rankings.
+            "X-Title": `${YOUR_SITE_NAME}`, // Optional. Shows in rankings on openrouter.ai.
+        },
+        body: JSON.stringify({
+            model: "mistralai/mixtral-8x7b-instruct",
+            messages: [
+                { role: "user", content: sourceText }
+            ]
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        
+        const translation = data.choices[0].message.content;
+        console.log(translation);
+        box.innerHTML = `Converted Speach:  ${translation}`;
+    })
+  
+}
